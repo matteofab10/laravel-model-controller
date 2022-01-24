@@ -8,8 +8,8 @@ class PageController extends Controller
 {
     public function index() {
 
-        $name = 'Giuseppe';
-        $surname = 'Verdi';
+        $name = 'Matteo';
+        $surname = 'Fabio';
 
         return view('home', compact('name', 'surname'));
     }
