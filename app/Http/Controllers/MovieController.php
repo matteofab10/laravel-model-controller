@@ -9,8 +9,10 @@ class MovieController extends Controller
 {
     public function index() {
 
-        $movies = Movie::all();
-        dump($movies);
+        $movies = Movie::select('*')
+        ->orderBy('vote')
+        ->get();
+        
         return view ('movies', compact('movies'));
     }
 }
